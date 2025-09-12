@@ -1,4 +1,7 @@
-import { Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+
+<Route path="/" element={<Home />} />
+
 
 import ContentCreation from "./pages/ContentCreation";
 import DataAnalysis from "./pages/DataAnalysis";
