@@ -1,3 +1,4 @@
+// search-everything-ai/search-everything-ai-main/src/pages/MarketingCampaigns.tsx
 import { useState } from "react";
 
 export default function MarketingCampaigns() {
@@ -35,3 +36,4 @@ export default function MarketingCampaigns() {
     </div>
   );
 }
+
