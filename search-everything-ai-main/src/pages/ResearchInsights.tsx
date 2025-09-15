@@ -1,3 +1,4 @@
+// search-everything-ai/search-everything-ai-main/src/pages/ResearchInsights.tsx
 import { useState } from "react";
 
 export default function ResearchInsights() {
@@ -35,3 +36,4 @@ export default function ResearchInsights() {
     </div>
   );
 }
+
