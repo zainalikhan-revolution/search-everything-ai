@@ -1,13 +1,13 @@
-// search-everything-ai/search-everything-ai-main/src/pages/ResearchInsights.tsx
+// search-everything-ai/search-everything-ai-main/src/pages/SocialMediaManager.tsx
 import { useState } from "react";
 
-export default function ResearchInsights() {
+export default function SocialMediaManager() {
   const [prompt, setPrompt] = useState("");
   const [result, setResult] = useState("");
 
   const handleRun = async () => {
     try {
-      const res = await fetch("/api/research-insights", {
+      const res = await fetch("/api/social-media-manager", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
@@ -16,17 +16,17 @@ export default function ResearchInsights() {
       setResult(data.output);
     } catch (err) {
       console.error(err);
-      setResult("⚠️ Error running Research & Insights task.");
+      setResult("⚠️ Error running Social Media Manager task.");
     }
   };
 
   return (
     <div style={{ padding: "2rem" }}>
-      <h2>Research & Insights</h2>
+      <h2>Social Media Manager</h2>
       <textarea
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
-        placeholder="What research topic do you need insights on?..."
+        placeholder="Describe your social media content or strategy request..."
         rows={5}
         style={{ width: "100%", marginBottom: "1rem" }}
       />
