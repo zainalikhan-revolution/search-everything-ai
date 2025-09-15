@@ -21,17 +21,44 @@ export default function AudioProcessing() {
 
   return (
     <div style={{ padding: "2rem" }}>
-      <h2>Audio Processing</h2>
+      <h1>AI Audio Processing</h1>
+      <p style={{ maxWidth: "600px", marginBottom: "1rem" }}>
+        Enhance, edit, and generate audio with AI. From music production and
+        podcast editing to voice synthesis and noise reduction, this tool
+        handles every sound task.
+      </p>
+
       <textarea
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
-        placeholder="Describe the audio task (e.g., edit, synthesize)..."
+        placeholder="Describe the audio task (e.g., remove noise, generate voice, edit podcast)..."
         rows={5}
-        style={{ width: "100%", marginBottom: "1rem" }}
+        style={{ width: "100%", marginBottom: "1rem", padding: "0.5rem" }}
       />
+
       <br />
-      <button onClick={handleRun}>Run</button>
-      <pre style={{ marginTop: "1rem", whiteSpace: "pre-wrap" }}>{result}</pre>
+      <button
+        onClick={handleRun}
+        style={{
+          padding: "0.5rem 1rem",
+          background: "#007bff",
+          color: "#fff",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
+      >
+        Process Audio
+      </button>
+
+      <div style={{ marginTop: "2rem" }}>
+        {result && (
+          <>
+            <h3>Processing Result:</h3>
+            <pre style={{ whiteSpace: "pre-wrap" }}>{result}</pre>
+          </>
+        )}
+      </div>
     </div>
   );
 }
