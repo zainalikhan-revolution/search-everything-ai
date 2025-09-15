@@ -1,3 +1,22 @@
+search-everything-ai/search-everything-ai-main/src/pages
+/HealthWellness.tsx
+Go to file
+t
+zainalikhan-revolution
+zainalikhan-revolution
+Create HealthWellness.tsx
+f635f99
+ · 
+3 days ago
+search-everything-ai/search-everything-ai-main/src/pages
+/HealthWellness.tsx
+
+Code
+
+Blame
+37 lines (34 loc) · 1.04 KB
+export default function HealthWellness() {
+  const handleRun = async () => {
 import { useState } from "react";
 
 export default function HealthWellness() {
