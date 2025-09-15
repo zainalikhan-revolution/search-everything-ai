@@ -1,3 +1,4 @@
+// search-everything-ai/search-everything-ai-main/src/pages/LegalDocuments.tsx
 import { useState } from "react";
 
 export default function LegalDocuments() {
