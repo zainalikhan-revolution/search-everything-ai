@@ -21,17 +21,44 @@ export default function CodeGeneration() {
 
   return (
     <div style={{ padding: "2rem" }}>
-      <h2>Code Generation</h2>
+      <h1>AI Code Generation</h1>
+      <p style={{ maxWidth: "600px", marginBottom: "1rem" }}>
+        Generate production-ready code with ease. From front-end components to
+        back-end APIs, mobile apps, and automation scripts — describe what you
+        need, and let AI build it for you.
+      </p>
+
       <textarea
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
-        placeholder="Describe the code you need..."
-        rows={5}
-        style={{ width: "100%", marginBottom: "1rem" }}
+        placeholder="Describe the code you need (e.g., 'React login form', 'Python API', 'Node.js script')..."
+        rows={6}
+        style={{ width: "100%", marginBottom: "1rem", padding: "0.5rem" }}
       />
+
       <br />
-      <button onClick={handleRun}>Run</button>
-      <pre style={{ marginTop: "1rem", whiteSpace: "pre-wrap" }}>{result}</pre>
+      <button
+        onClick={handleRun}
+        style={{
+          padding: "0.5rem 1rem",
+          background: "#007bff",
+          color: "#fff",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
+      >
+        Generate Code
+      </button>
+
+      <div style={{ marginTop: "2rem" }}>
+        {result && (
+          <>
+            <h3>Generated Code:</h3>
+            <pre style={{ whiteSpace: "pre-wrap" }}>{result}</pre>
+          </>
+        )}
+      </div>
     </div>
   );
 }
