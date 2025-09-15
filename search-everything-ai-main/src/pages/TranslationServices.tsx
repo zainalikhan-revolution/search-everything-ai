@@ -1,4 +1,8 @@
+// search-everything-ai/search-everything-ai-main/src/pages/TranslationServices.tsx
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function TranslationServices() {
   const [prompt, setPrompt] = useState("");
@@ -20,18 +24,30 @@ export default function TranslationServices() {
   };
 
   return (
-    <div style={{ padding: "2rem" }}>
-      <h2>Translation Services</h2>
-      <textarea
-        value={prompt}
-        onChange={(e) => setPrompt(e.target.value)}
-        placeholder="Enter text to translate and target language..."
-        rows={5}
-        style={{ width: "100%", marginBottom: "1rem" }}
-      />
-      <br />
-      <button onClick={handleRun}>Run</button>
-      <pre style={{ marginTop: "1rem", whiteSpace: "pre-wrap" }}>{result}</pre>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
+      <Card className="w-full max-w-2xl shadow-xl">
+        <CardHeader>
+          <CardTitle className="text-2xl font-bold">🌍 Translation Services</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Textarea
+            value={prompt}
+            onChange={(e) => setPrompt(e.target.value)}
+            placeholder="Enter text to translate and target language..."
+            rows={5}
+            className="mb-4"
+          />
+          <Button onClick={handleRun} className="w-full">
+            Run Translation
+          </Button>
+          {result && (
+            <pre className="mt-4 p-3 bg-gray-100 rounded-md whitespace-pre-wrap">
+              {result}
+            </pre>
+          )}
+        </CardContent>
+      </Card>
     </div>
   );
 }
+
