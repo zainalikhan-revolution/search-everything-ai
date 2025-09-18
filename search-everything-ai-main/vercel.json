@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cd search-everything-ai-main && npm run build",
+  "outputDirectory": "search-everything-ai-main/dist"
+}
