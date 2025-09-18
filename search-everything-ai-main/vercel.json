@@ -1,5 +1,14 @@
 {
-  "buildCommand": "cd search-everything-ai-main && npm run build",
-  "outputDirectory": "search-everything-ai-main/.next",
-  "installCommand": "cd search-everything-ai-main && npm install"
+  "builds": [
+    {
+      "src": "search-everything-ai-main/package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/search-everything-ai-main/$1"
+    }
+  ]
 }
