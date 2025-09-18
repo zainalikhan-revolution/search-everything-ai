@@ -1,3 +1,4 @@
+
 {
   "name": "search-everything-ai",
   "private": true,
@@ -7,6 +8,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint ."
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -46,7 +51,7 @@
     "embla-carousel-react": "^8.6.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.462.0",
-    "next": "13.5.10",
+    "next": "^15.5.3",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
@@ -78,10 +83,6 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0"
   }
-}
-"engines": {
-  "node": "18.x",
-  "npm": "9.x"
 }
 
 
